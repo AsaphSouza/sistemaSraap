@@ -6,10 +6,10 @@ import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.TypedQuery;
 import br.upe.sraap.model.DAO.AlunoDAO;
-import br.upe.sraap.model.DAO.genericoDAO;
+import br.upe.sraap.model.DAO.GenericoDAO;
 import br.upe.sraap.model.entidades.Aluno;
 
-public class AlunoHibernate extends genericoDAO<Aluno> implements AlunoDAO{
+public class AlunoHibernate extends GenericoDAO<Aluno> implements AlunoDAO{
 	
 	private final EntityManager em = Persistencia.getEntityManager();
 

@@ -69,6 +69,18 @@ public class UsuarioController {
 			return null;
 		}
 	}
+	
+	public String Login() throws Exception {
+		return usuarioModel.login(usuario.getEmail(), usuario.getSenha());
+	}
+
+	public UsuarioModel getUsuarioModel() {
+		return usuarioModel;
+	}
+
+	public void setUsuarioModel(UsuarioModel usuarioModel) {
+		this.usuarioModel = usuarioModel;
+	}
 
 	public Usuario getUsuario() {
 		return usuario;
@@ -77,5 +89,6 @@ public class UsuarioController {
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
 	}
+
 
 }

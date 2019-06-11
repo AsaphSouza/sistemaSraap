@@ -3,25 +3,24 @@ package br.upe.sraap.controller;
 import javax.faces.bean.ManagedBean;
 import javax.faces.view.ViewScoped;
 import org.hibernate.HibernateException;
-import br.upe.sraap.model.entidades.Professor;
-import br.upe.sraap.model.entidades.Usuario;
-import br.upe.sraap.model.model.ProfessorModel;
+import br.upe.sraap.model.entidades.Turma;
+import br.upe.sraap.model.model.TurmaModel;
 
 @ManagedBean
 @ViewScoped
-public class ProfessorController {
+public class TurmaController {
 	
-	private ProfessorModel professorModel;
-	private Professor professor;
+	private TurmaModel turmaModel;
+	private Turma turma;
 	
-	public ProfessorController () {
-		professor = new Professor();
-		professorModel = new ProfessorModel();
+	public TurmaController() {
+		turmaModel = new TurmaModel();
+		turma = new Turma();
 	}
 	
 	public void cadastrar() {
 		try {
-			professorModel.inserir(getProfessor());
+			turmaModel.inserir(getTurma());
 
 		} catch (HibernateException e) {
 			e.printStackTrace();
@@ -34,7 +33,7 @@ public class ProfessorController {
 
 	public void deletar() {
 		try {
-			professorModel.excluir(getProfessor());
+			turmaModel.excluir(getTurma());
 
 		} catch (HibernateException e) {
 			e.printStackTrace();
@@ -46,7 +45,7 @@ public class ProfessorController {
 
 	public void atualizar() {
 		try {
-			professorModel.atualizar(getProfessor());
+			turmaModel.atualizar(getTurma());
 
 		} catch (HibernateException e) {
 			e.printStackTrace();
@@ -57,9 +56,9 @@ public class ProfessorController {
 
 	}
 
-	public Usuario buscarID() {
+	public Turma buscarID() {
 		try {
-			return professorModel.buscarID(getProfessor());
+			return turmaModel.buscarID(getTurma());
 
 		} catch (HibernateException e) {
 			e.printStackTrace();
@@ -71,12 +70,20 @@ public class ProfessorController {
 		}
 	}
 
-	public Professor getProfessor() {
-		return professor;
+	public TurmaModel getTurmaModel() {
+		return turmaModel;
 	}
 
-	public void setProfessor(Professor professor) {
-		this.professor = professor;
+	public void setTurmaModel(TurmaModel turmaModel) {
+		this.turmaModel = turmaModel;
+	}
+
+	public Turma getTurma() {
+		return turma;
+	}
+
+	public void setTurma(Turma turma) {
+		this.turma = turma;
 	}
 	
 }

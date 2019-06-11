@@ -1,7 +1,6 @@
 package br.upe.sraap.model.entidades;
 
 import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
