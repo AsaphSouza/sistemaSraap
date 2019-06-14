@@ -2,9 +2,7 @@ package br.upe.sraap.controller;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.view.ViewScoped;
-
 import org.hibernate.HibernateException;
-
 import br.upe.sraap.model.entidades.Professor;
 import br.upe.sraap.model.entidades.Usuario;
 import br.upe.sraap.model.model.ProfessorModel;

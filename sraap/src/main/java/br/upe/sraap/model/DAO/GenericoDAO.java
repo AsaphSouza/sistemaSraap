@@ -5,7 +5,7 @@ import javax.persistence.NoResultException;
 import org.hibernate.HibernateException;
 import br.upe.sraap.model.hibernate.Persistencia;
 
-public class genericoDAO<T> implements DAO<T> {
+public class GenericoDAO<T> implements DAO<T> {
 
 	private static EntityManager em = Persistencia.getEntityManager();
 
@@ -18,7 +18,7 @@ public class genericoDAO<T> implements DAO<T> {
 
 		} catch (HibernateException e) {
 			em.getTransaction().rollback();
-			throw new HibernateException("Erro de persistência");
+			throw new HibernateException("Erro de persistï¿½ncia");
 
 		} catch (Exception e) {
 			em.getTransaction().rollback();
@@ -60,7 +60,7 @@ public class genericoDAO<T> implements DAO<T> {
 
 		} catch (HibernateException e) {
 			em.getTransaction().rollback();
-			throw new HibernateException("Erro de remoção.");
+			throw new HibernateException("Erro de remoï¿½ï¿½o.");
 
 		} catch (Exception e) {
 			em.getTransaction().rollback();
